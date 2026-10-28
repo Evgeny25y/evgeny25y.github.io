@@ -205,14 +205,14 @@ h1 em{background:linear-gradient(var(--accent),var(--accent)) left 96%/0 .09em n
 .final .btn-main{animation:vpPulse 2.4s ease-out infinite}
 @keyframes vpPulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent) 55%,transparent)}100%{box-shadow:0 0 0 16px transparent}}
 
-/* бывшие серые поля: изумрудно-голубые, по ним переливается волна */
-:root{--soft:#DDF5F0;--wave:linear-gradient(115deg,#C9F1E2 0%,#CDEDFA 22%,#EAFBF6 42%,#BFE8F4 62%,#D3F5E8 80%,#C9F1E2 100%)}
+/* бывшие серые поля: светло-голубые, по ним переливается волна */
+:root{--soft:#E3F2FD;--wave:linear-gradient(115deg,#D6ECFC 0%,#E6F4FE 22%,#F4FAFF 42%,#CFE7FB 62%,#E1F1FD 80%,#D6ECFC 100%)}
 .hello,.btn-ghost:not(.final .btn-ghost),.steps li,.badge.demo,.quote,.typing,.browser .bar{background:var(--wave);background-size:300% 100%;animation:vpWave 9s ease-in-out infinite alternate}
 .hero > div:first-child > .hello{animation:vpUp .8s cubic-bezier(.2,.8,.2,1) both,vpWave 9s ease-in-out infinite alternate}
 .steps li:nth-child(2){animation-delay:-2s}.steps li:nth-child(3){animation-delay:-4s}.steps li:nth-child(4){animation-delay:-6s}
 .btn-ghost:not(.final .btn-ghost):hover{background:var(--wave);background-size:300% 100%;filter:saturate(1.4) brightness(.97)}
-.badge.demo{color:#1F5F57}
-.fan::before{background:radial-gradient(closest-side,#CDEFF0,transparent 72%)}
+.badge.demo{color:#1E4A73}
+.fan::before{background:radial-gradient(closest-side,#DCEEFC,transparent 72%)}
 @keyframes vpWave{0%{background-position:0% 50%}100%{background-position:100% 50%}}
 
 @media (prefers-reduced-motion:reduce){
