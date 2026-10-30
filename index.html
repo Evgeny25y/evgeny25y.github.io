@@ -152,7 +152,10 @@ footer{padding:26px 0 40px;color:var(--ink-3);font-size:14px;display:flex;flex-w
 /* vitrina-patch */
 /* логотип rotov-saity.ru вместо инициалов «ЕР» в шапке */
 .brand{gap:12px}
-.brand i{width:40px;height:40px;background:#0B0F1A url(assets/logo.webp) center/cover no-repeat;font-size:0;color:transparent;flex:none}
+.brand i{width:40px;height:40px;background:#0B0F1A url(assets/logo.webp) center/cover no-repeat;font-size:0;color:transparent;flex:none;position:relative;cursor:zoom-in;transform-origin:left top;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+/* логотип при наведении растёт вниз-вправо, как фото */
+.brand i:hover,.brand:focus-visible i{transform:scale(6);box-shadow:0 0 0 .5px #fff,0 4px 10px rgba(20,21,26,.3);z-index:20}
+@media (max-width:600px){.brand i:hover,.brand:focus-visible i{transform:scale(5)}}
 /* фото: крупнее, при наведении растёт вниз-вправо поверх заголовка */
 .hello{gap:16px;padding:8px 22px 8px 8px;font-size:18px;position:relative;z-index:5}
 .hello img,.hello b{width:96px;height:96px;box-shadow:0 0 0 3px #fff,0 6px 18px rgba(20,21,26,.18)}
@@ -219,7 +222,7 @@ h1 em{background:linear-gradient(var(--accent),var(--accent)) left 96%/0 .09em n
 @keyframes vpWave{0%{background-position:0% 50%}100%{background-position:100% 50%}}
 
 @media (prefers-reduced-motion:reduce){
-  .hello img,.browser,.devices .phone,.price li,.steps li{transition:none}
+  .hello img,.brand i,.browser,.devices .phone,.price li,.steps li{transition:none}
   .hero > div:first-child > *,.fan,.fan .phone,.final .btn-main{animation:none}
   .hello,.btn-ghost,.steps li,.badge.demo,.quote,.typing,.browser .bar{animation:none}
   h1 em{animation:none;background-size:100% .09em}
