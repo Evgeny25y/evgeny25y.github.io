@@ -333,7 +333,7 @@ h1 em{background:linear-gradient(var(--accent),var(--accent)) left 96%/0 .09em n
   const ava = D.photo ? `<img src="${esc(D.photo)}" alt="${esc(D.name)}" tabindex="0" title="${esc(D.name)}">` : `<b>${esc(init)}</b>`;
 
   $('brandInit').textContent = init; $('brandName').textContent = D.name;
-  $('hello').innerHTML = `${ava}<span>Привет, я ${esc(first)}</span>`;
+  $('hello').innerHTML = `${ava}<span>Приветствую Вас, я ${esc(first)}</span>`;
   $('h1').innerHTML = D.h1 || `Сайты для малого бизнеса${D.city ? ` в <em>${esc(D.cityIn || D.city)}</em>` : ''}`;
   $('lead').textContent = D.lead || 'Соберу готовое демо вашего сайта до разговора – вы смотрите результат, а потом решаете.';
   $('chatAva').innerHTML = ava; $('chatName').textContent = D.name;
