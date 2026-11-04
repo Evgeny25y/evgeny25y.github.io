@@ -12,7 +12,7 @@
 <meta name="color-scheme" content="light">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* Витрина веб-мастера. Палитра задаётся тремя переменными в :root – их меняет сборка (vitrina.mjs). */
 :root{
@@ -258,6 +258,28 @@ h1 em{background:linear-gradient(var(--accent),var(--accent)) left 96%/0 .09em n
 .badge.demo{color:#1E4A73}
 .fan::before{background:radial-gradient(closest-side,#DCEEFC,transparent 72%)}
 @keyframes vpWave{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+
+/* строгая тёмная тема: графитовый фон, спокойные шрифты IBM Plex Sans + Inter */
+:root{
+  --paper:#0C0E12;--ink:#E9ECF2;--ink-2:#A6ACBA;--ink-3:#7A8090;--line:#232833;
+  --soft:#161A22;--accent:#5C7CFA;
+  --display:"IBM Plex Sans","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;
+  --wave:linear-gradient(115deg,#151922 0%,#1A1F2A 50%,#151922 100%);
+}
+h1,h2,h3{font-weight:600;letter-spacing:-.01em}
+h1{letter-spacing:-.02em}
+.eyebrow{letter-spacing:.14em}
+.top{background:rgba(12,14,18,.88)}
+.browser{background:#0C0E12;box-shadow:0 30px 50px -30px rgba(0,0,0,.8),0 0 0 1px var(--line)}
+.badge.demo{color:#9DB4FF}
+.fan::before{background:radial-gradient(closest-side,#1A2030,transparent 72%)}
+.hello img,.hello b{box-shadow:0 0 0 3px var(--line),0 6px 18px rgba(0,0,0,.5)}
+.hello img:hover,.hello img:focus{box-shadow:0 0 0 2px var(--line),0 18px 48px rgba(0,0,0,.7)}
+.final{background:#141821;border:1px solid var(--line);color:var(--ink)}
+.toast{background:#232833;color:var(--ink)}
+.vp-card:hover .browser{box-shadow:0 34px 50px -30px rgba(0,0,0,.9),0 0 0 1px var(--line)}
+.vp-chip[aria-pressed="true"],.btn-main,.badge.real,.steps li::before,.bubble,.vp-up{color:#fff}
+.chat{background:#fff;color:#14151A}
 
 @media (prefers-reduced-motion:reduce){
   .hello img,.brand i,.browser,.devices .phone,.price li,.steps li,.vp-chip{transition:none}
