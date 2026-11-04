@@ -259,27 +259,27 @@ h1 em{background:linear-gradient(var(--accent),var(--accent)) left 96%/0 .09em n
 .fan::before{background:radial-gradient(closest-side,#DCEEFC,transparent 72%)}
 @keyframes vpWave{0%{background-position:0% 50%}100%{background-position:100% 50%}}
 
-/* строгая тёмная тема: графитовый фон, спокойные шрифты IBM Plex Sans + Inter */
+/* светлая тема «Тёплые сливки»: кремовый фон, терракотовый акцент, зелёные вставки; шрифты IBM Plex Sans + Inter */
 :root{
-  --paper:#0C0E12;--ink:#E9ECF2;--ink-2:#A6ACBA;--ink-3:#7A8090;--line:#232833;
-  --soft:#161A22;--accent:#5C7CFA;
+  --paper:#FBF6EE;--ink:#2B2A33;--ink-2:#5E5A63;--ink-3:#85796B;--line:#EADFCF;
+  --soft:#F3EADB;--accent:#CF5A22;
   --display:"IBM Plex Sans","Inter",system-ui,sans-serif;--body:"Inter",system-ui,sans-serif;
-  --wave:linear-gradient(115deg,#151922 0%,#1A1F2A 50%,#151922 100%);
+  --wave:linear-gradient(115deg,#F3EADB 0%,#F8F0E3 50%,#F3EADB 100%);
 }
 h1,h2,h3{font-weight:600;letter-spacing:-.01em}
 h1{letter-spacing:-.02em}
 .eyebrow{letter-spacing:.14em}
-.top{background:rgba(12,14,18,.88)}
-.browser{background:#0C0E12;box-shadow:0 30px 50px -30px rgba(0,0,0,.8),0 0 0 1px var(--line)}
-.badge.demo{color:#9DB4FF}
-.fan::before{background:radial-gradient(closest-side,#1A2030,transparent 72%)}
-.hello img,.hello b{box-shadow:0 0 0 3px var(--line),0 6px 18px rgba(0,0,0,.5)}
-.hello img:hover,.hello img:focus{box-shadow:0 0 0 2px var(--line),0 18px 48px rgba(0,0,0,.7)}
-.final{background:#141821;border:1px solid var(--line);color:var(--ink)}
-.toast{background:#232833;color:var(--ink)}
-.vp-card:hover .browser{box-shadow:0 34px 50px -30px rgba(0,0,0,.9),0 0 0 1px var(--line)}
+.top{background:rgba(251,246,238,.9)}
+.browser{background:#fff;box-shadow:0 24px 44px -28px rgba(80,55,30,.35),0 0 0 1px var(--line)}
+.badge.demo{color:#2F6F5E}
+.fan::before{background:radial-gradient(closest-side,#E3F0EB,transparent 72%)}
+.hello img,.hello b{box-shadow:0 0 0 3px #fff,0 6px 18px rgba(80,55,30,.15)}
+.hello img:hover,.hello img:focus{box-shadow:0 0 0 2px #fff,0 18px 48px rgba(80,55,30,.3)}
+.final{background:#2F6F5E;border:0;color:#fff}
+.toast{background:#2B2A33;color:#fff}
+.vp-card:hover .browser{box-shadow:0 30px 46px -28px rgba(80,55,30,.4),0 0 0 1px var(--line)}
 .vp-chip[aria-pressed="true"],.btn-main,.badge.real,.steps li::before,.bubble,.vp-up{color:#fff}
-.chat{background:#fff;color:#14151A}
+.chat{background:#fff;color:#2B2A33}
 
 @media (prefers-reduced-motion:reduce){
   .hello img,.brand i,.browser,.devices .phone,.price li,.steps li,.vp-chip{transition:none}
