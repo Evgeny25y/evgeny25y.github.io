@@ -305,6 +305,10 @@ h1{letter-spacing:-.02em}
 .bonus b{font:700 34px/1 var(--display);color:var(--accent)}
 .bonus b small{font:600 15px/1 var(--body);color:var(--ink-2);margin-left:6px}
 .bonus-note{margin:16px 2px 0;color:var(--ink-2);font-size:15px}
+/* согласие на обработку данных под кнопками связи */
+.consent{margin:16px 0 0;max-width:46ch;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72)}
+.consent a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.consent a:hover{text-decoration-thickness:2px}
 </style>
 </head>
 <body>
@@ -547,6 +551,12 @@ h1{letter-spacing:-.02em}
         + '<ul class="bonus">' + (L.items || []).map((x) => '<li><b>' + esc(x.n) + '<small>баллов</small></b><span>' + esc(x.t) + '</span></li>').join('') + '</ul>'
         + (L.note ? '<p class="bonus-note">' + esc(L.note) + '</p>' : '');
       how.parentNode.insertBefore(sec, how);
+    }
+    const cta = document.querySelector('#write [data-cta]');
+    if (cta && !document.querySelector('#write .consent')) {
+      const p = document.createElement('p'); p.className = 'consent';
+      p.innerHTML = 'Нажимая на кнопку мессенджера, вы соглашаетесь с <a href="' + esc(D.policyFile || 'politika.html') + '">политикой обработки персональных данных</a>.';
+      cta.insertAdjacentElement('afterend', p);
     }
   } catch (e) { console.error('vitrina-patch extra', e); }
 })();
