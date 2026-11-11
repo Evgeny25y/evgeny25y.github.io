@@ -478,7 +478,7 @@ h1{letter-spacing:-.02em}
   const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const rest = (D.cases || []).filter((c) => !c.featured);
   const box = document.getElementById('catalog');
-  if (box && rest.length) {
+  if (false && box && rest.length) { // каталог «Другие работы» отключён 11.11.2026 по просьбе Евгения
     const FIRST = 12;
     const size = (g) => rest.filter((c) => c.group === g).length;
     const groups = [...new Set(rest.map((c) => c.group).filter(Boolean))].sort((a, b) => size(b) - size(a));
